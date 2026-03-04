@@ -9,7 +9,7 @@ body {
   min-height: 100vh;
 }
 
-/* Slider container */
+/* Container that hides overflow */
 .slider-container {
   width: 80%;
   max-width: 800px;
@@ -33,7 +33,32 @@ body {
   color: white;
 }
 
-/* Different background colors for each step */
+/* Background colors for each step */
+.step1 { background: #0078d7; }   /* Blue */
+.step2 { background: #28a745; }   /* Green */
+.step3 { background: #ff9800; }   /* Orange */
+.step4 { background: #9c27b0; }   /* Purple */
+
+/* Controls */
+.controls {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: #0078d7;
+  color: white;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #005a9e;
+}
 .step1 { background: #0078d7; }
 .step2 { background: #28a745; }
 .step3 { background: #ff9800; }
