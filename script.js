@@ -1,14 +1,17 @@
+const slider = document.querySelector('.slider');
 const slides = document.querySelectorAll('.slide');
 let current = 0;
 
+function updateSlide() {
+  slider.style.transform = `translateX(-${current * 100}%)`;
+}
+
 document.getElementById('next').addEventListener('click', () => {
-  slides[current].classList.remove('active');
   current = (current + 1) % slides.length;
-  slides[current].classList.add('active');
+  updateSlide();
 });
 
 document.getElementById('prev').addEventListener('click', () => {
-  slides[current].classList.remove('active');
   current = (current - 1 + slides.length) % slides.length;
-  slides[current].classList.add('active');
+  updateSlide();
 });
