@@ -4,7 +4,7 @@
 body {
   font-family: 'Quicksand', sans-serif;
   margin: 0;
-  background: #1c1c1c;
+  background: #fff0f6; /* pastel pink background */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,9 +33,11 @@ body {
   height: 100%;
   padding: 40px;
   box-sizing: border-box;
-  color: #fff;
+  color: #333;
   text-align: center;
   position: relative;
+  border: 6px solid transparent;
+  border-image: linear-gradient(45deg, #ff9ff3, #feca57, #a29bfe, #55efc4) 1;
   animation: colorShift 20s infinite alternate;
 }
 
@@ -94,12 +96,12 @@ p, li {
   display: block;
 }
 
-/* Background colors aligned with machines + money theme */
-.step1 { background: #2c3e50; }   /* Steel gray - machines */
-.step2 { background: #27ae60; }   /* Green - money/research */
-.step3 { background: #f1c40f; color: #333; }   /* Gold - conclusions/value */
-.step4 { background: #e74c3c; }   /* Red - prototype/energy */
-.step5 { background: #2980b9; }   /* Blue - final showcase/technology */
+/* Pastel backgrounds for each step */
+.step1 { background: #ffeaa7; }   /* pastel yellow */
+.step2 { background: #a29bfe; }   /* pastel purple */
+.step3 { background: #55efc4; }   /* pastel mint */
+.step4 { background: #fab1a0; }   /* pastel coral */
+.step5 { background: #81ecec; }   /* pastel aqua */
 
 /* Color shift animation */
 @keyframes colorShift {
@@ -118,4 +120,13 @@ p, li {
 
 /* Glowing pill-shaped buttons */
 button {
-  padding: 14px 30px
+  padding: 14px 30px;
+  margin: 0 12px;
+  cursor: pointer;
+  border: none;
+  border-radius: 50px; /* pill shape */
+  background: linear-gradient(135deg, #ff6b6b, #ff9ff3);
+  color: white;
+  font-size: 20px;
+  font-family: 'Baloo 2', cursive;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0
