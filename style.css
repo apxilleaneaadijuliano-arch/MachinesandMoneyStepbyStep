@@ -4,12 +4,7 @@
 body {
   font-family: 'Quicksand', sans-serif;
   margin: 0;
-  background: #fff0f6; /* pastel pink background */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; /* full screen */
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -33,17 +28,15 @@ body {
   height: 100%;
   padding: 40px;
   box-sizing: border-box;
-  color: #333;
   text-align: center;
   position: relative;
   border: 6px solid transparent;
   border-image: linear-gradient(45deg, #ff9ff3, #feca57, #a29bfe, #55efc4) 1;
-  animation: colorShift 20s infinite alternate;
 }
 
 /* Intro slide */
 .intro {
-  background: linear-gradient(135deg, #ff9ff3, #feca57); /* pink + peach */
+  background: linear-gradient(135deg, #ff9ff3, #feca57); /* pastel pink + peach */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,14 +69,16 @@ body {
 /* Headings */
 h1 {
   font-family: 'Baloo 2', cursive;
-  font-size: 2.8em;
+  font-size: 2.6em;
   margin-bottom: 20px;
+  color: #333;
 }
 
 /* Paragraphs and lists */
 p, li {
-  font-size: 1.4em;
+  font-size: 1.3em;
   line-height: 1.6;
+  color: #333;
 }
 
 /* Image styling */
@@ -92,23 +87,16 @@ p, li {
   height: auto;
   margin: 20px auto;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
   display: block;
 }
 
 /* Pastel backgrounds for each step */
-.step1 { background: #ffeaa7; }   /* pastel yellow */
-.step2 { background: #a29bfe; }   /* pastel purple */
-.step3 { background: #55efc4; }   /* pastel mint */
-.step4 { background: #fab1a0; }   /* pastel coral */
-.step5 { background: #81ecec; }   /* pastel aqua */
-
-/* Color shift animation */
-@keyframes colorShift {
-  0% { filter: hue-rotate(0deg); }
-  50% { filter: hue-rotate(90deg); }
-  100% { filter: hue-rotate(0deg); }
-}
+.step1 { background: #ffd1dc; }   /* pastel pink */
+.step2 { background: #cdb4db; }   /* pastel lavender */
+.step3 { background: #b5ead7; }   /* pastel mint */
+.step4 { background: #ffb347; }   /* pastel peach/orange */
+.step5 { background: #a0e7e5; }   /* pastel aqua */
 
 /* Controls */
 .controls {
@@ -118,15 +106,35 @@ p, li {
   text-align: center;
 }
 
-/* Glowing pill-shaped buttons */
+/* Cute glowing buttons */
 button {
-  padding: 14px 30px;
+  padding: 18px;
   margin: 0 12px;
   cursor: pointer;
   border: none;
-  border-radius: 50px; /* pill shape */
-  background: linear-gradient(135deg, #ff6b6b, #ff9ff3);
+  border-radius: 50%; /* circular buttons */
+  background: linear-gradient(135deg, #ff9ff3, #a29bfe);
   color: white;
-  font-size: 20px;
+  font-size: 24px;
   font-family: 'Baloo 2', cursive;
-  box-shadow: 0 0 15px rgba(255, 105, 180, 0
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.8);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 25px rgba(255, 105, 180, 1);
+}
+
+/* Prototype link styling */
+.prototype-link {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 1.4em;
+  font-family: 'Baloo 2', cursive;
+  color: #fff;
+  background: linear-gradient(135deg, #ff9ff3, #feca57);
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 0 15px rgba(255, 
