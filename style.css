@@ -1,7 +1,10 @@
+/* Import cute fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Quicksand:wght@400;600&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Quicksand', sans-serif;
   margin: 0;
-  background: #f4f4f4;
+  background: #fff8f0; /* soft warm background */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,29 +14,83 @@ body {
 
 /* Container that hides overflow */
 .slider-container {
-  width: 80%;
-  max-width: 800px;
+  width: 85%;
+  max-width: 900px;
   overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.25);
+  background: white;
 }
 
 /* Slider track */
 .slider {
   display: flex;
-  transition: transform 0.6s ease;
+  transition: transform 0.7s ease-in-out;
 }
 
 /* Each slide */
 .slide {
   min-width: 100%;
-  height: 400px;
-  padding: 30px;
+  height: 450px;
+  padding: 40px;
   box-sizing: border-box;
-  color: white;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+/* Headings with cute font */
+h1 {
+  font-family: 'Baloo 2', cursive;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+/* Paragraphs and lists */
+p, li {
+  font-size: 1.3em;
+  line-height: 1.6;
+}
+
+/* Image styling */
+.slide-img {
+  max-width: 70%;
+  height: auto;
+  margin: 15px auto;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  display: block;
 }
 
 /* Background colors for each step */
+.step1 { background: #ffb347; }   /* Orange - brainstorming */
+.step2 { background: #6ab04c; }   /* Green - research */
+.step3 { background: #f9ca24; }   /* Yellow - conclusions */
+.step4 { background: #eb4d4b; }   /* Red - prototype */
+.step5 { background: #22a6b3; }   /* Blue - final showcase */
+
+/* Controls */
+.controls {
+  margin-top: 25px;
+}
+
+button {
+  padding: 12px 25px;
+  margin: 0 12px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background: #0078d7;
+  color: white;
+  font-size: 18px;
+  font-family: 'Baloo 2', cursive;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #005a9e;
+  transform: scale(1.05);
+}
 .step1 { background: #0078d7; }   /* Blue */
 .step2 { background: #28a745; }   /* Green */
 .step3 { background: #ff9800; }   /* Orange */
